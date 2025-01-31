@@ -1,0 +1,60 @@
+button {
+    padding: 1rem !important;
+    font-size: 1.25rem !important;
+    font-weight: bold !important;
+    border-radius: 0.5rem !important;
+    border: 2px solid #ccc !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+}
+s
+#buttons button {
+    background-color: #e2e8f0 !important;
+    color: #333 !important;
+}
+
+#buttons button:hover {
+    background-color: #cbd5e1 !important;
+}
+
+/* Boutons des opérateurs */
+.btn-op {
+    background-color: #3b82f6 !important;
+    color: white !important;
+}
+
+.btn-op:hover {
+    background-color: #2563eb !important;
+}
+
+/* Bouton C */
+#btn-clear {
+    background-color: #ef4444 !important;
+    color: white !important;
+}
+
+#btn-clear:hover {
+    background-color: #dc2626 !important;
+}
+
+/* Bouton = */
+#btn-equal {
+    background-color: #10b981 !important;
+    color: white !important;
+}
+
+#btn-equal:hover {
+    background-color: #059669 !important;
+}
+
+button:active {
+    transform: scale(0.95) !important;
+}
+
+#screen {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    border-radius: 0.5rem !important;
+    box-shadow: inset 0px -3px 5px rgba(0, 0, 0, 0.2) !important;
+}
