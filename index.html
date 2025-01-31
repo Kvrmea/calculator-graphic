@@ -5,44 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculatrice graphique</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
-  <script src="script.js"></script>
 </head>
 <body class="flex justify-center items-center min-h-screen bg-gray-100">
+  <button id="toggle-scientific" class="absolute top-4 left-4 flex items-center justify-center px-6 py-3 bg-gray-900 text-green-400 font-bold rounded-lg shadow-md hover:bg-gray-700 active:scale-95 transition-all text-lg tracking-wider border border-gray-700" style="font-family: 'Orbitron', sans-serif;">
+    SCI MODE
+  </button>
+    
   <main class="flex flex-col items-center">
-    <h1 class="text-3xl font-bold underline mb-4">Calculette graphique</h1>
-
+    
     <div id="calcBody" class="w-80 bg-white p-4 rounded-lg shadow-lg border">
-
+      <h1 class="text-3xl font-bold  mb-4 text-right w-full tracking-widest text-gray-800 uppercase drop-shadow-lg" style="font-family: 'Orbitron', sans-serif;">Calculator</h1>
+      
       <div id="screen" class="w-full h-16 bg-gray-200 text-right text-2xl flex items-center justify-end px-4 mb-4 rounded-lg">0</div>
-
+      
       <div id="buttons" class="grid grid-cols-4 gap-1">
 
-          <button id="btn-op">%</button>
-          <button id="btn-op">/</button>
-          <button id="btn-clear" class="col-span-2">C</button>
-
+        <button id="btn-op">%</button>
+        <button id="btn-op">/</button>
+        <button id="btn-clear" class="col-span-2">C</button>
+        
         <button id="btn">7</button>
         <button id="btn">8</button>
         <button id="btn">9</button>
         <button id="btn-op">*</button>
-
+        
         <button id="btn">4</button>
         <button id="btn">5</button>
         <button id="btn">6</button>
         <button id="btn-op">-</button>
-
+        
         <button id="btn">1</button>
         <button id="btn">2</button>
         <button id="btn">3</button>
         <button id="btn-op">+</button>
-
+        
         <button id="btn">.</button>
         <button id="btn" class="col-span-2">0</button>
         <button id="btn-equal">=</button>
       </div>
-
+      
     </div>
+
+    <div id="scientificCalc" class="w-80 bg-white p-4 rounded-lg shadow-lg border mt-4 hidden">
+      <h2 class="text-xl font-bold mb-2 text-center text-gray-800 uppercase drop-shadow-lg" style="font-family: 'Orbitron', sans-serif;">Scientific Mode</h2>
+      
+      <div id="sci-buttons" class="grid grid-cols-4 gap-1">
+        <button id="btn-sci">sin</button>
+        <button id="btn-sci">cos</button>
+        <button id="btn-sci">tan</button>
+        <button id="btn-sci">log</button>
+        
+        <button id="btn-sci">e</button>
+        <button id="btn-sci">π</button>
+        <button id="btn-sci">x²</button>
+        <button id="btn-sci">√</button>
+        
+        <button id="btn-sci">(</button>
+        <button id="btn-sci">)</button>
+        <button id="btn-sci">^</button>
+        <button id="btn-sci">exp</button>
+      </div>
+    </div>
+    
   </main>
+  <footer class="w-full text-center py-4 bg-gray-900 text-gray-300 mt-8 fixed bottom-0">
+    <p class="text-sm font-mono tracking-widest">© 2025 Hugo Munoz - Calculator Graphic | Made with ❤️</p>
+  </footer>  
+
+  <script src="script.js"></script>
 </body>
 </html>
