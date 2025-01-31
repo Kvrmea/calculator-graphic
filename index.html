@@ -8,20 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
 </head>
-<body class="flex justify-center items-center min-h-screen bg-gray-100">
+<body class="relative flex flex-col justify-center items-center min-h-screen pb-16 bg-gray-100">
+
+  <!-- Bouton Toggle Mode Scientifique -->
   <button id="toggle-scientific" class="absolute top-4 left-4 flex items-center justify-center px-6 py-3 bg-gray-900 text-green-400 font-bold rounded-lg shadow-md hover:bg-gray-700 active:scale-95 transition-all text-lg tracking-wider border border-gray-700" style="font-family: 'Orbitron', sans-serif;">
     SCI MODE
   </button>
     
-  <main class="flex flex-col items-center">
-    
+  <main class="flex flex-col items-center w-full">
+
+    <!-- Calculatrice Standard -->
     <div id="calcBody" class="w-80 bg-white p-4 rounded-lg shadow-lg border">
-      <h1 class="text-3xl font-bold  mb-4 text-right w-full tracking-widest text-gray-800 uppercase drop-shadow-lg" style="font-family: 'Orbitron', sans-serif;">Calculator</h1>
+      <h1 class="text-3xl font-bold mb-4 text-right w-full tracking-widest text-gray-800 uppercase drop-shadow-lg" style="font-family: 'Orbitron', sans-serif;">Calculator</h1>
+      <div id="liveCalculation" class="w-full h-8 text-right text-lg text-gray-600 px-4 mb-1">0</div>
+
+      <div id="history" class="w-80 bg-white p-4 rounded-lg shadow-lg border mt-4 hidden">
+        <h2 class="text-xl font-bold mb-2 text-center text-gray-800 uppercase" style="font-family: 'Orbitron', sans-serif;">Historique</h2>
+        <ul id="history-list" class="text-right text-gray-700"></ul>
+      </div>
+
+      
       
       <div id="screen" class="w-full h-16 bg-gray-200 text-right text-2xl flex items-center justify-end px-4 mb-4 rounded-lg">0</div>
       
       <div id="buttons" class="grid grid-cols-4 gap-1">
-
         <button id="btn-op">%</button>
         <button id="btn-op">/</button>
         <button id="btn-clear" class="col-span-2">C</button>
@@ -45,9 +55,9 @@
         <button id="btn" class="col-span-2">0</button>
         <button id="btn-equal">=</button>
       </div>
-      
     </div>
-
+    
+    <!-- Mode Scientifique -->
     <div id="scientificCalc" class="w-80 bg-white p-4 rounded-lg shadow-lg border mt-4 hidden">
       <h2 class="text-xl font-bold mb-2 text-center text-gray-800 uppercase drop-shadow-lg" style="font-family: 'Orbitron', sans-serif;">Scientific Mode</h2>
       
@@ -68,11 +78,11 @@
         <button id="btn-sci">exp</button>
       </div>
     </div>
-    
   </main>
-  <footer class="w-full text-center py-4 bg-gray-900 text-gray-300 mt-8 fixed bottom-0">
+
+  <footer class="w-full text-center py-4 bg-gray-900 text-gray-300 fixed bottom-0">
     <p class="text-sm font-mono tracking-widest">© 2025 Hugo Munoz - Calculator Graphic | Made with ❤️</p>
-  </footer>  
+  </footer> 
 
   <script src="script.js"></script>
 </body>
